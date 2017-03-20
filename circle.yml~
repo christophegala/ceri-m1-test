@@ -9,4 +9,4 @@ general:
 
 test:
     override:
-        - mvn deploy -Prun-its -s settings.xml
+        - mvn integration-test
