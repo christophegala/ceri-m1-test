@@ -9,4 +9,4 @@ general:
 
 test:
     override:
-        - mvn integration-test
+        - mvn test
