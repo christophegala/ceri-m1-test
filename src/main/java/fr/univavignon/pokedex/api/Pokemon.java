@@ -5,7 +5,7 @@ package fr.univavignon.pokedex.api;
  * 
  * @author fv
  */
-public final class Pokemon extends PokemonMetadata { //NOPMD
+public final class Pokemon extends PokemonMetadata {
 
 	/** Combat Point of the pokemon. **/
 	private final int cp;
@@ -36,7 +36,7 @@ public final class Pokemon extends PokemonMetadata { //NOPMD
 	 * @param candy Required candy for upgrading this pokemon.
 	 * @param iv IV perfection percentage.
 	 */
-	public Pokemon(
+	public Pokemon(  //NOPMD
 			final int index,
 			final String name,
 			final int attack,
