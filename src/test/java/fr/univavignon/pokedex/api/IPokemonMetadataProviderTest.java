@@ -15,7 +15,7 @@ public class IPokemonMetadataProviderTest {
 	@Mock private IPokemonMetadataProvider poketest;
 	
 	@Test
-	public void Equal() throws PokedexException
+	public void equal() throws PokedexException
 	{
 		assertEquals(poketest.getPokemonMetadata(0).getIndex(), poke1.getIndex());
 		assertEquals(poketest.getPokemonMetadata(0).getName(), poke1.getName());

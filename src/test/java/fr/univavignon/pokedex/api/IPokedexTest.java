@@ -15,7 +15,6 @@ public class IPokedexTest {
 	public Pokemon poke2=new Pokemon(pokemonmetadata2.getIndex(), pokemonmetadata2.getName(), pokemonmetadata2.getAttack(), pokemonmetadata2.getDefense(), pokemonmetadata2.getStamina(),
 									133, 2729, 202, 5000, 4);
 	@Mock private IPokedex pokedex;
-	@Mock private IPokemonMetadataProvider metadataprovider;
 	
 	@Test
 	public void addPokemon()

@@ -10,7 +10,6 @@ import org.mockito.MockitoAnnotations;
 public class IPokemonTrainerFactoryTest {
 	@Mock private IPokemonTrainerFactory pokemontrainerfactory;
 	@Mock private PokemonTrainer pokemontrainer;
-	@Mock private IPokedex pokedex;
 	@Mock private IPokedexFactory pokedexfactory;
 	
 	@Test
