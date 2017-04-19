@@ -13,7 +13,7 @@ public class IPokemonTrainerFactoryTest {
 	@Mock private IPokemonMetadataProvider metadataprovider;
 	@Mock private IPokemonFactory pokemonfactory;
 	
-	private PokemonTrainer pokemontrainer=new PokemonTrainer("chris", Team.MYSTIC, pokedexfactory.createPokedex(metadataprovider, pokemonfactory));
+	public PokemonTrainer pokemontrainer=new PokemonTrainer("chris", Team.MYSTIC, pokedexfactory.createPokedex(metadataprovider, pokemonfactory));
 	
 	
 	@Test
