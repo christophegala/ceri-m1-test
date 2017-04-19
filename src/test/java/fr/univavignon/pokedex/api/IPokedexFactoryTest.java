@@ -17,7 +17,7 @@ public class IPokedexFactoryTest {
 	@Test
 	public void createPokedex()
 	{
-		assertEquals(pokedex, pokedexfactory.createPokedex(metadataprovider, pokemonfactory));
+		assertEquals(pokedexfactory.createPokedex(metadataprovider, pokemonfactory), pokedex);
 	}
 
 	@Before
