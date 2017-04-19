@@ -18,8 +18,17 @@ public class IPokemonMetadataProviderTest {
 	@Test
 	public void Equal() throws PokedexException
 	{
-		assertEquals(poketest.getPokemonMetadata(0), poke1);
-		assertEquals(poketest.getPokemonMetadata(133), poke2);
+		assertEquals(poketest.getPokemonMetadata(0).getIndex(), poke1.getIndex());
+		assertEquals(poketest.getPokemonMetadata(0).getName(), poke1.getName());
+		assertEquals(poketest.getPokemonMetadata(0).getAttack(), poke1.getAttack());
+		assertEquals(poketest.getPokemonMetadata(0).getDefense(), poke1.getDefense());
+		assertEquals(poketest.getPokemonMetadata(0).getStamina(), poke1.getStamina());
+		
+		assertEquals(poketest.getPokemonMetadata(133).getIndex(), poke2.getIndex());
+		assertEquals(poketest.getPokemonMetadata(133).getName(), poke2.getName());
+		assertEquals(poketest.getPokemonMetadata(133).getAttack(), poke2.getAttack());
+		assertEquals(poketest.getPokemonMetadata(133).getDefense(), poke2.getDefense());
+		assertEquals(poketest.getPokemonMetadata(133).getStamina(), poke2.getStamina());
 	}
 	
 	@Test (expected=PokedexException.class)
