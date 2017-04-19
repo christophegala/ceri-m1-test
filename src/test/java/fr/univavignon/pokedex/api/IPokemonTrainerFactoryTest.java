@@ -11,10 +11,13 @@ public class IPokemonTrainerFactoryTest {
 	@Mock private IPokemonTrainerFactory pokemontrainerfactory;
 	@Mock private PokemonTrainer pokemontrainer;
 	@Mock private IPokedexFactory pokedexfactory;
+	@Mock private IPokemonMetadataProvider metadataprovider;
+	@Mock private IPokemonFactory pokemonfactory; 
 	
 	@Test
 	public void createTrainer()
 	{
+		pokemontrainer=new PokemonTrainer("chris", Team.MYSTIC, pokedexfactory.createPokedex(metadataprovider, pokemonfactory));
 		assertEquals(pokemontrainerfactory.createTrainer("chris", Team.MYSTIC, pokedexfactory), pokemontrainer);
 	}
 	
