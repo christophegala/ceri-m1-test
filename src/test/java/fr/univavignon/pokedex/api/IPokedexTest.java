@@ -39,6 +39,5 @@ public class IPokedexTest {
 		Mockito.when(pokedex.addPokemon(poke2)).thenReturn(133);
 		Mockito.when(pokedex.getPokemon(0)).thenReturn(poke1);
 		Mockito.when(pokedex.getPokemon(133)).thenReturn(poke2);
-		
 	}
 }
