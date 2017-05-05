@@ -22,16 +22,17 @@ public class PokemonFactory implements IPokemonFactory {
 	@Override
 	public Pokemon createPokemon(int index, int cp, int hp, int dust, int candy)
 	{
-		PokemonMetadata tmp =  pokemonMetadataProvider().getPokemonMetadata(index);
+		PokemonMetadata pokemonmetadata =  pokemonMetadataProvider().getPokemonMetadata(index);
+		int iv = new CalculatorIV().getIv(tmp.getName(), cp, hp, dust);
         return new Pokemon(index,
-                tmp.getName(),
-                tmp.getAttack(),
-                tmp.getDefense(),
-                tmp.getStamina(),
+        		pokemonmetadata.getName(),
+        		pokemonmetadata.getAttack(),
+        		pokemonmetadata.getDefense(),
+        		pokemonmetadata.getStamina(),
                 cp,
                 hp,
                 dust,
                 candy,
-                50);
+                iv);
 	}
 }
