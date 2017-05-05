@@ -19,9 +19,19 @@ public class PokemonFactory implements IPokemonFactory {
 	 * @param candy Required candy for upgrading pokemon.
 	 * @return Created pokemon instance.
 	 */
+	@Override
 	public Pokemon createPokemon(int index, int cp, int hp, int dust, int candy)
 	{
-		
+		PokemonMetadata tmp =  pokemonMetadataProvider().getPokemonMetadata(index);
+        return new Pokemon(index,
+                tmp.getName(),
+                tmp.getAttack(),
+                tmp.getDefense(),
+                tmp.getStamina(),
+                cp,
+                hp,
+                dust,
+                candy,
+                50);
 	}
-	
 }
