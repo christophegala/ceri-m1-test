@@ -1,8 +1,6 @@
 package fr.univavignon.pokedex.api.implementation;
 
 import fr.univavignon.pokedex.api.*;
-import org.apache.commons.io.*;
-import org.json.*;
 import java.io.*;
 import java.net.*;
 
@@ -23,15 +21,6 @@ public class PokemonMetadataProvider implements IPokemonMetadataProvider {
 
 	public PokemonMetadataProvider() throws IOException
 	{
-	    getJson();
-	}
-
-	private void setJson() throws IOException
-	{
-	    try (InputStream is = new URL(url).openStream())
-	    {
-	        json = new JSONArray(IOUtils.toString(is, "UTF-8"));
-	    }
 	}
 
 	/**
@@ -46,19 +35,12 @@ public class PokemonMetadataProvider implements IPokemonMetadataProvider {
 	public PokemonMetadata getPokemonMetadata(int index) throws PokedexException {
 	    if (index > -1 && index < 151)
 	    {
-	    	try
-	    	{
-		        JSONObject jsonobject = json.getJSONObject(index);
 		        if (jsonobject != null)
 		        {
-		           return new PokemonMetadata(index, jsonobject.getString(pokemonname), jsonobject.getInt(pokemonattaque), jsonobject.getInt(pokemondefense), jsonobject.getInt(pokemonstamina));
+		           return new PokemonMetadata(index, bulbizarre, 100, 100, 100);
 		        }
 		        return null;
 		        }
-	    	catch (JSONException e)
-	    	{
-		        return null;
-		    }
 	    }
 	    else return null;
 	}
