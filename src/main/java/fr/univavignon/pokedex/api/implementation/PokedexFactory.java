@@ -8,7 +8,7 @@ import fr.univavignon.pokedex.api.*;
  * 
  * @author cg
  */
-public interface IPokedexFactory {
+public class PokedexFactory implements IPokedexFactory {
 
 	/**
 	 * Creates a new pokedex instance using the given 
