@@ -20,6 +20,7 @@ public class Pokedex implements IPokedex, Serializable {
 	 * 
 	 * @return Number of pokemon in this pokedex.
 	 */
+	@Override
 	int size()
 	{
 		return pokemons.size();
@@ -32,6 +33,7 @@ public class Pokedex implements IPokedex, Serializable {
 	 * @param pokemon Pokemon to add to this pokedex.
 	 * @return Index of this pokemon relative to this pokedex.
 	 */
+	@Override
 	int addPokemon(Pokemon pokemon)
 	{
 		if(pokemons.size<151)
@@ -52,6 +54,7 @@ public class Pokedex implements IPokedex, Serializable {
 	 * @return Pokemon denoted by the given identifier.
 	 * @throws PokedexException If the given <tt>index</tt> is not valid.
 	 */
+	@Override
 	Pokemon getPokemon(int id) throws PokedexException
 	{
 		return pokemons.get(id);
@@ -62,6 +65,7 @@ public class Pokedex implements IPokedex, Serializable {
 	 * 
 	 * @return Unmodifiable list of all pokemons.
 	 */
+	@Override
 	List<Pokemon> getPokemons()
 	{
 		return pokemons;
@@ -74,6 +78,7 @@ public class Pokedex implements IPokedex, Serializable {
 	 * @param order Comparator instance used for sorting the created view.
 	 * @return Sorted unmodifiable list of all pokemons.
 	 */
+	@Override
 	List<Pokemon> getPokemons(Comparator<Pokemon> order)
 	{
 		List<Pokemon> ordered=pokemons;
