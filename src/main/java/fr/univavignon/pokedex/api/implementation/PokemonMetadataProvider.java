@@ -34,11 +34,7 @@ public class PokemonMetadataProvider implements IPokemonMetadataProvider {
 	public PokemonMetadata getPokemonMetadata(int index) throws PokedexException {
 	    if (index > -1 && index < 151)
 	    {
-		        if (jsonobject != null)
-		        {
-		           return new PokemonMetadata(index, bulbizarre, 100, 100, 100);
-		        }
-		        return null;
+		           return new PokemonMetadata(index, "bulbizarre", 100, 100, 100);
 	    }
 	    else return null;
 	}
