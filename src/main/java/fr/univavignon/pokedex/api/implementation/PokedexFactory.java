@@ -1,5 +1,8 @@
 package fr.univavignon.pokedex.api.implementation;
 
+
+import fr.univavignon.pokedex.api.*;
+
 /**
  * Factory interface for class that aims to create IPokedex instance.
  * 
@@ -15,6 +18,7 @@ public interface IPokedexFactory {
 	 * @param pokemonFactory Pokemon factory the created pokedex will use.
 	 * @return Created pokedex instance.
 	 */
+	@Override
 	IPokedex createPokedex(IPokemonMetadataProvider metadataProvider, IPokemonFactory pokemonFactory)
 	{
 		return new Pokedex(metadataProvider, pokemonFactory);
