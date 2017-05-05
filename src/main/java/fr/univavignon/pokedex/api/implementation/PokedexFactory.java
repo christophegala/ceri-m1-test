@@ -4,7 +4,7 @@ package fr.univavignon.pokedex.api.implementation;
 import fr.univavignon.pokedex.api.*;
 
 /**
- * Factory interface for class that aims to create IPokedex instance.
+ * Factory implementation of IPokedexFactory.
  * 
  * @author cg
  */
