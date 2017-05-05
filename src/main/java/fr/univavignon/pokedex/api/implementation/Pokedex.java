@@ -47,7 +47,7 @@ public class Pokedex implements IPokedex, Serializable {
 	@Override
 	public int addPokemon(Pokemon pokemon)
 	{
-		if(pokemons.size<151)
+		if(pokemons.size()<151)
 		{
 			pokemons.add(pokemon);
 			return pokemons.size()-1;

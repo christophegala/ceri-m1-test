@@ -19,7 +19,7 @@ public class PokedexFactory implements IPokedexFactory {
 	 * @return Created pokedex instance.
 	 */
 	@Override
-	IPokedex createPokedex(IPokemonMetadataProvider metadataProvider, IPokemonFactory pokemonFactory)
+	public IPokedex createPokedex(IPokemonMetadataProvider metadataProvider, IPokemonFactory pokemonFactory)
 	{
 		return new Pokedex(metadataProvider, pokemonFactory);
 	}
