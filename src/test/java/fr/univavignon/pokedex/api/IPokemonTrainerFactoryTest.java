@@ -10,8 +10,8 @@ import org.mockito.MockitoAnnotations;
 public class IPokemonTrainerFactoryTest {
 	@Mock private IPokemonTrainerFactory pokemontrainerfactory;
 	@Mock private IPokedexFactory pokedexfactory;
-	@Mock private IPokemonMetadataProvider metadataprovider;
-	@Mock private IPokemonFactory pokemonfactory;
+	@Mock private IPokemonMetadataProvider metadataprovider = Mockito.mock(IPokemonMetadataProvider.class);
+	@Mock private IPokemonFactory pokemonfactory = Mockito.mock(IPokemonFactory.class);
 	
 	public PokemonTrainer pokemontrainer=new PokemonTrainer("chris", Team.MYSTIC, pokedexfactory.createPokedex(metadataprovider, pokemonfactory));
 	
