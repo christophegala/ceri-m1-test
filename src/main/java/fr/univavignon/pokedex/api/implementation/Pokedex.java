@@ -3,7 +3,7 @@ package fr.univavignon.pokedex.api.implementation;
 import java.util.Comparator;
 import java.util.List;
 import java.io.Serializable;
-import fr.univavignon.pokedex.api.*;
+import fr.univavignon.pokedex.api.IPokedex;
 
 /**
  * IPokedex interface. An IPokedex aims to store all information about
@@ -14,14 +14,26 @@ import fr.univavignon.pokedex.api.*;
 public class Pokedex implements IPokedex, Serializable {
 	
 	private List<Pokemon> pokemons;
+	private IPokemonMetadataProvider metadataprovider;
+	private IPokemonFactory pokemonFactory;
 	
+	public Pokedex()
+	{
+		
+	}
+	
+	public Pokedex(IPokemonMetadataProvider metadataProvider, IPokemonFactory pokemonFactory)
+	{
+		this.metadataprovider = metadataProvider;
+		this.pokemonFactory = pokemonFactory;
+	}
 	/**
 	 * Returns the number of pokemon this pokedex contains.
 	 * 
 	 * @return Number of pokemon in this pokedex.
 	 */
 	@Override
-	int size()
+	public int size()
 	{
 		return pokemons.size();
 	}
@@ -34,7 +46,7 @@ public class Pokedex implements IPokedex, Serializable {
 	 * @return Index of this pokemon relative to this pokedex.
 	 */
 	@Override
-	int addPokemon(Pokemon pokemon)
+	public int addPokemon(Pokemon pokemon)
 	{
 		if(pokemons.size<151)
 		{
@@ -55,7 +67,7 @@ public class Pokedex implements IPokedex, Serializable {
 	 * @throws PokedexException If the given <tt>index</tt> is not valid.
 	 */
 	@Override
-	Pokemon getPokemon(int id) throws PokedexException
+	public Pokemon getPokemon(int id) throws PokedexException
 	{
 		return pokemons.get(id);
 	}
@@ -66,7 +78,7 @@ public class Pokedex implements IPokedex, Serializable {
 	 * @return Unmodifiable list of all pokemons.
 	 */
 	@Override
-	List<Pokemon> getPokemons()
+	public List<Pokemon> getPokemons()
 	{
 		return pokemons;
 	}
@@ -79,11 +91,10 @@ public class Pokedex implements IPokedex, Serializable {
 	 * @return Sorted unmodifiable list of all pokemons.
 	 */
 	@Override
-	List<Pokemon> getPokemons(Comparator<Pokemon> order)
+	public List<Pokemon> getPokemons(Comparator<Pokemon> order)
 	{
 		List<Pokemon> ordered=pokemons;
 		ordered.sort(order);
 		return ordered;
 	}
-	
 }
