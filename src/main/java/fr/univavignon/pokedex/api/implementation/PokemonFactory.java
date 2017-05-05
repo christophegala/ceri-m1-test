@@ -23,7 +23,6 @@ public class PokemonFactory implements IPokemonFactory {
 	public Pokemon createPokemon(int index, int cp, int hp, int dust, int candy)
 	{
 		PokemonMetadata pokemonmetadata =  pokemonMetadataProvider().getPokemonMetadata(index);
-		int iv = new CalculatorIV().getIv(tmp.getName(), cp, hp, dust);
         return new Pokemon(index,
         		pokemonmetadata.getName(),
         		pokemonmetadata.getAttack(),
@@ -33,6 +32,6 @@ public class PokemonFactory implements IPokemonFactory {
                 hp,
                 dust,
                 candy,
-                iv);
+                50);
 	}
 }
