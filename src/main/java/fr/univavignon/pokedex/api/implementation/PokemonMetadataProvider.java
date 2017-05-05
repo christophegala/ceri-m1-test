@@ -13,7 +13,6 @@ import java.net.*;
 public class PokemonMetadataProvider implements IPokemonMetadataProvider {
 
 	private static final String url = "https://raw.githubusercontent.com/PokemonGo-Enhanced/node-pokemongo-data/master/data.json";
-	private static JSONArray json;
 	private static  final String pokemonname = "Identifier";
 	private static  final String pokemonattaque = "BaseAttack";
 	private static  final String pokemondefense = "BaseDefense";
