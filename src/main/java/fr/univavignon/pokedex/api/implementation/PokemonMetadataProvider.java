@@ -1,6 +1,10 @@
 package fr.univavignon.pokedex.api.implementation;
 
 import fr.univavignon.pokedex.api.*;
+import org.apache.commons.io.*;
+import org.json.*;
+import java.io.*;
+import java.net.*;
 
 /**
  * An IPokemonMetadataProvider aims to provide PokemonMetadata
