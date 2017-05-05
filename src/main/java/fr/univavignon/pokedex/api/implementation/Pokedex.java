@@ -2,6 +2,8 @@ package fr.univavignon.pokedex.api.implementation;
 
 import java.util.Comparator;
 import java.util.List;
+import java.io.Serializable;
+import fr.univavignon.pokedex.api.*;
 
 /**
  * IPokedex interface. An IPokedex aims to store all information about
