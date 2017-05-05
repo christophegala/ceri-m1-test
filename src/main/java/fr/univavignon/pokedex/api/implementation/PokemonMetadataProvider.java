@@ -13,10 +13,10 @@ import java.net.*;
 public class PokemonMetadataProvider implements IPokemonMetadataProvider {
 
 	private static final String url = "https://raw.githubusercontent.com/PokemonGo-Enhanced/node-pokemongo-data/master/data.json";
-	private static  final String pokemonname = "Identifier";
-	private static  final String pokemonattaque = "BaseAttack";
-	private static  final String pokemondefense = "BaseDefense";
-	private static  final String pokemonstamina = "BaseStamina";
+	private static final String pokemonname = "Identifier";
+	private static final String pokemonattaque = "BaseAttack";
+	private static final String pokemondefense = "BaseDefense";
+	private static final String pokemonstamina = "BaseStamina";
 
 	public PokemonMetadataProvider() throws IOException
 	{
@@ -39,7 +39,6 @@ public class PokemonMetadataProvider implements IPokemonMetadataProvider {
 		           return new PokemonMetadata(index, bulbizarre, 100, 100, 100);
 		        }
 		        return null;
-		        }
 	    }
 	    else return null;
 	}
